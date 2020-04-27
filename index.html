@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        .first{
+            width: 100px;
+            height: 100px;
+            background: brown;
+            position: absolute;
+        }
+        .second{
+            width: 100px;
+            height: 100px;
+            top: 100px;
+            background: purple;
+            position: absolute;
+        }
+        button{
+            width: 120px;
+            height: 30px;
+        }
+        img{
+            position: absolute;
+            left: 0;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="back">Back</button>
+    <button id="reset">Reset</button>
+    <img src="Muhammad Shakir Jamil.jpg" alt="">
+
+    <!-- <div class="container">
+        <div class="first"></div>
+        <div class="second"></div>
+    </div> -->
+<script src="jquery.js"></script>
+<script>
+    $('#start').on('click',function(){
+        $('img').animate({left: '+=200px'},1000, function(){})
+    })
+
+    $('#stop').on('click',function(){
+        $('img').stop()
+    })
+
+    $('#back').on('click',function(){
+        $('img').animate({left: '+=-200px'},1000, function(){})
+    })
+
+    $('#reset').on('click',function(){
+        $('img').animate({left: '0px'},1000, function(){})
+    })
+
+
+
+
+
+
+
+    // $('.first').animate({left:300},1000,'linear', function(){})
+    // $('.second').animate({height:200, width:250},1000,'linear', chain1)
+    // function chain1(){
+    //     $('.second').animate({height:100, width:100,left:200},300,'linear', chain2)
+    // }
+    // function chain2(){
+    //     $('.second').animate({left:300,width:150,height:150,top:200},500,'swing',function(){})
+    // }
+</script>    
+</body>
+</html>
